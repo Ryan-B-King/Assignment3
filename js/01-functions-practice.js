@@ -57,18 +57,22 @@ findModulus(5, 1);
 
 //STEP 5
 
-function addTotal() {
-    let var1;
-    let var2;
-    let var3;
+let var1;
+let var2;
+let var3;
+
+var1 = Number(window.prompt("Enter first number to add."));
+var2 = Number(window.prompt("Enter second number to add."));
+var3 = Number(window.prompt("Enter third number to add."));
+
+function addTotal(num) {
     let total;
-
-    var1 = Number(window.prompt("Enter first number to add."));
-    var2 = Number(window.prompt("Enter second number to add."));
-    var3 = Number(window.prompt("Enter third number to add."));
-    total = var1 + var2 + var3;
-
+    let i;
+    total = num;
+    for (i = 1; i <arguments.length; i++) {
+        total += Number(arguments[i]);
+    }
     return window.console.log("The total sum of: " + var1 + ", " + var2 + ", and " + var3 + " equals " + total + ".");
 }
 
-addTotal();
+addTotal(var1, var2, var3);
