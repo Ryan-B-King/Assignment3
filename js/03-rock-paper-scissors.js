@@ -18,12 +18,26 @@ function playGame() {
         playerChoice === "scissors") {
             playerChoice;
     } else {
-        do {
-
-        } while ();
+        while (playerChoice !== "Rock" ||
+            playerChoice !== "rock" ||
+            playerChoice !== "Paper" ||
+            playerChoice !== "paper" ||
+            playerChoice !== "Scissors" ||
+            playerChoice !== "scissors") {
+                playerChoice = window.prompt("Choose 'Rock', 'Paper', or 'Scissors' ");
+                    if (playerChoice === "Rock" ||
+                    playerChoice === "rock" ||
+                    playerChoice === "Paper" ||
+                    playerChoice === "paper" ||
+                    playerChoice === "Scissors" ||
+                    playerChoice === "scissors") {
+                        break;
+                    }
+        }
     }
 
-    compRandom = Number(Math.random().round + Math.random().round);
+    compRandom = Math.random().round + Math.random().round;
+    window.console.log(compRandom + " compRandom");
     if (compRandom === 0) {
         return compchoice === "Rock";
     } else if (compRandom === 1) {
@@ -31,6 +45,7 @@ function playGame() {
     } else {
         return compChoice === "Scissors"
     }
+    window.console.log(compChoice + " compChoice");
 
     if(playerChoice) {
         
