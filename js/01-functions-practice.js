@@ -66,6 +66,7 @@ var2 = Number(window.prompt("Enter second number to add."));
 var3 = Number(window.prompt("Enter third number to add."));
 
 function addTotal(num) {
+    "use strict";
     let total;
     let i;
     total = num;
