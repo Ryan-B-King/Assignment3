@@ -1,14 +1,17 @@
+// GLOBAL VARIABLES
 let num1;
 let num2;
 let operation;
 let result;
 let keepCalculating;
 
+// FUNCTION TO DISPLAY STARTING ALERT
 function displayTitle() {
     "use strict";
     window.alert("Activating Calculator...");
 }
 
+// FUNCTION TO RUN CALCULATIONS
 function calculate(num1, num2, operation) {
     "use strict";
     switch(operation) {
@@ -30,6 +33,7 @@ function calculate(num1, num2, operation) {
     window.alert("The result of " + num1 + " " + operation + " " + num2 + " equals " + result + ".");
 }
 
+// FUNCTION TO TAKE USER INPUT AND VALIDATE & CALLS CALCULATE()
 function useCalculator() {
     "use strict";
 
@@ -65,6 +69,7 @@ function useCalculator() {
     calculate(num1, num2, operation);
 }
 
+// FUNCTION TO RUN FULL PROGRAM
 function main() {
     "use strict";
     displayTitle();
@@ -78,4 +83,6 @@ function main() {
     }
     window.alert("Decativating Calculator...");
 }
+
+// CALL MAIN() TO RUN PROGRAM
 main();
