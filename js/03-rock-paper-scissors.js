@@ -6,51 +6,79 @@ function displayTitle() {
 function playGame() {
     "use strict";
     let playerChoice;
+    let rock;
+    let paper;
+    let scissors;
     let compRandom;
-    let compChoice;
+    let compRock;
+    let compPaper;
+    let compScissors;
+    let win;
+    let lose;
 
     playerChoice = window.prompt("Choose 'Rock', 'Paper', or 'Scissors' ");
-    if (playerChoice === "Rock" ||
-        playerChoice === "rock" ||
-        playerChoice === "Paper" ||
-        playerChoice === "paper" ||
-        playerChoice === "Scissors" ||
-        playerChoice === "scissors") {
-            playerChoice;
+
+    rock = (playerChoice === "Rock" || playerChoice === "rock");
+    paper = (playerChoice === "Paper" || playerChoice === "paper");
+    scissors = (playerChoice === "Scissors" || playerChoice === "scissors");
+
+    while (!rock && !paper && !scissors) {
+
+        playerChoice = window.prompt("Choose 'Rock', 'Paper', or 'Scissors' ");
+
+        rock = (playerChoice === "Rock" || playerChoice === "rock");
+        paper = (playerChoice === "Paper" || playerChoice === "paper");
+        scissors = (playerChoice === "Scissors" || playerChoice === "scissors");
+    }
+
+    window.alert("You play: " + playerChoice);
+
+    compRandom = Math.round(Math.random(compRandom)) + Math.round(Math.random(compRandom)) + Math.round(Math.random(compRandom));
+
+    if (compRandom === 1) {
+        compRock = "Rock";
+        window.alert("Computer plays: " + compRock);
+    } else if (compRandom === 2) {
+        compPaper = "Paper";
+        window.alert("Computer plays: " + compPaper);
     } else {
-        while (playerChoice !== "Rock" ||
-            playerChoice !== "rock" ||
-            playerChoice !== "Paper" ||
-            playerChoice !== "paper" ||
-            playerChoice !== "Scissors" ||
-            playerChoice !== "scissors") {
-                playerChoice = window.prompt("Choose 'Rock', 'Paper', or 'Scissors' ");
-                    if (playerChoice === "Rock" ||
-                    playerChoice === "rock" ||
-                    playerChoice === "Paper" ||
-                    playerChoice === "paper" ||
-                    playerChoice === "Scissors" ||
-                    playerChoice === "scissors") {
-                        break;
-                    }
+        compScissors = "Scissors";
+        window.alert("Computer plays: " + compScissors);
+    }
+
+    if(rock){
+        win = compScissors
+        lose = compPaper
+
+        if (win) {
+            window.alert("Rock beats Scissors.  You win!");
+        } else if (lose) {
+            window.alert("Paper beats Rock.  You Lose!");
+        } else {
+            window.alert("We both used Rock.  It's a tie.  Try again!");
         }
-    }
+    } else if (paper) {
+        win = compRock
+        lose = compScissors
 
-    compRandom = Math.random().round + Math.random().round;
-    window.console.log(compRandom + " compRandom");
-    if (compRandom === 0) {
-        return compchoice === "Rock";
-    } else if (compRandom === 1) {
-        return compChoice === "Paper";
+        if (win) {
+            window.alert("Paper beats Rock.  You win!");
+        } else if (lose) {
+            window.alert("Scissors beats Paper.  You Lose!");
+        } else {
+            window.alert("We both used Paper.  It's a tie.  Try again!");
+        }
     } else {
-        return compChoice === "Scissors"
-    }
-    window.console.log(compChoice + " compChoice");
+        win = compPaper
+        lose = compRock
 
-    if(playerChoice) {
-        
-    } else {
-
+        if (win) {
+            window.alert("Scissors beats Paper.  You win!");
+        } else if (lose) {
+            window.alert("Rock beats Scissors.  You Lose!");
+        } else {
+            window.alert("We both used Scissors.  It's a tie.  Try again!");
+        }
     }
 }
 
