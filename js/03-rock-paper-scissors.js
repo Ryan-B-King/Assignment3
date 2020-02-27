@@ -89,6 +89,9 @@ function main() {
     while (playAgain === "y") {
         playGame();
         playAgain = window.prompt("Wanna play again (y/n)?");
+        while (playAgain !== "y" && playAgain !== "n") {
+            playAgain = window.prompt("Wanna play again (y/n)?");
+        }
     }
     window.alert("Thanks for playing.");
 }
