@@ -1,8 +1,10 @@
+// FUNCTION TO DISPLAY TITLE
 function displayTitle() {
     "use strict";
     window.alert("Let's play Rock, Paper, Scissors!");
 }
 
+// FUNCTION TO COLLECT INPUT, VALIDATE AND OUTPUT RESULTS
 function playGame() {
     "use strict";
     let playerChoice;
@@ -84,6 +86,7 @@ function playGame() {
     }
 }
 
+// FUNCTION TO RUN FULL GAME
 function main() {
     "use strict";
     displayTitle();
@@ -97,4 +100,6 @@ function main() {
     }
     window.alert("Thanks for playing.");
 }
+
+// CALL MAIN() TO RUN GAME
 main();
