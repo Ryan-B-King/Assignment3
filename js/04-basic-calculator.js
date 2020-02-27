@@ -9,7 +9,7 @@ function displayTitle() {
     window.alert("Activating Calculator...");
 }
 
-function calculate (num1, num2, operation) {
+function calculate(num1, num2, operation) {
     "use strict";
     switch(operation) {
         case "+":
@@ -62,7 +62,7 @@ function useCalculator() {
         }
     }
 
-    calculate (num1, num2, operation);
+    calculate(num1, num2, operation);
 }
 
 function main() {

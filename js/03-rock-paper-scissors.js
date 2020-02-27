@@ -51,31 +51,33 @@ function playGame() {
         lose = compPaper
 
         if (win) {
-            window.alert("Rock beats Scissors.  You win!");
+            window.alert("Rock destroys Scissors.  You win!");
         } else if (lose) {
-            window.alert("Paper beats Rock.  You Lose!");
+            window.alert("Paper covers Rock.  You Lose!");
         } else {
             window.alert("We both used Rock.  It's a tie.  Try again!");
         }
+
     } else if (paper) {
         win = compRock
         lose = compScissors
 
         if (win) {
-            window.alert("Paper beats Rock.  You win!");
+            window.alert("Paper covers Rock.  You win!");
         } else if (lose) {
-            window.alert("Scissors beats Paper.  You Lose!");
+            window.alert("Scissors cut Paper.  You Lose!");
         } else {
             window.alert("We both used Paper.  It's a tie.  Try again!");
         }
+        
     } else {
         win = compPaper
         lose = compRock
 
         if (win) {
-            window.alert("Scissors beats Paper.  You win!");
+            window.alert("Scissors cut Paper.  You win!");
         } else if (lose) {
-            window.alert("Rock beats Scissors.  You Lose!");
+            window.alert("Rock destroys Scissors.  You Lose!");
         } else {
             window.alert("We both used Scissors.  It's a tie.  Try again!");
         }

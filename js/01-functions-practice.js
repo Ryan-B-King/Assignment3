@@ -70,7 +70,7 @@ function addTotal(num) {
     let total;
     let i;
     total = num;
-    for (i = 1; i <arguments.length; i++) {
+    for (i = 1; i < arguments.length; i++) {
         total += Number(arguments[i]);
     }
     return window.console.log("The total sum of: " + var1 + ", " + var2 + ", and " + var3 + " equals " + total + ".");
