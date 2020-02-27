@@ -31,26 +31,39 @@ function calculate (num1, num2, operation) {
 }
 
 function useCalculator() {
+    "use strict";
 
-num1 = parseFloat(window.prompt("Input your first numeric value.", "0-9"));
+    num1 = parseFloat(window.prompt("Input your first numeric value.", "0-9"));
 
-if (isNaN(num1)){
+    if (isNaN(num1)){
+        while (isNaN(num1)) {
+            window.alert("You've input an incorrect value.")
+            num1 = parseFloat(window.prompt("Input your first numeric value.", "0-9"));
+        }
+    }
 
+    num2 = parseFloat(window.prompt("Input your second number value.", "0-9"));
+
+    if (isNaN(num2)){
+        while (isNaN(num2)) {
+            window.alert("You've input an incorrect value.")
+            num2 = parseFloat(window.prompt("Input your second numeric value.", "0-9"));
+        }
+    }
+
+    operation = window.prompt("Type out which operation you would like to perform?", "+, -, *, or /");
+
+    if (operation === "+" || operation === "-" || operation === "*" || operation === "/") {
+        operation;
+    } else {
+        while (operation !== "+" && operation !== "-" && operation !== "*" && operation !== "/") {
+            window.alert("You've input an incorrect value.")
+            operation = window.prompt("Type out which operation you would like to perform?", "+, -, *, or /");
+        }
+    }
+
+    calculate (num1, num2, operation);
 }
-
-
-num2 = parseFloat(window.prompt("Input your second number value.", "0-9"));
-operation = window.prompt("Type out which operation you would like to perform?", "+, -, *, or /");
-
-
-
-
-calculate (num1, num2, operation);
-}
-
-
-
-
 
 function main() {
     "use strict";
